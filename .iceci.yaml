@@ -6,5 +6,4 @@ steps:
     tag: gh
     dockerSecret: hub2
     registry: docker.io
-    dockerfilePath: build/Dockerfile2
 
