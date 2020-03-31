@@ -2,6 +2,7 @@ steps:
 - name: build
   dockerBuild:
     user: dandruszak
+    imageName: icetek
     tag: gh
     dockerSecret: hub2
 
