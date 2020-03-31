@@ -5,5 +5,5 @@ steps:
     imageName: icetek
     tag: gh
     dockerSecret: hub2
-
+    dockerfilePath: build/Dockerfile2
 
