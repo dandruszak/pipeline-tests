@@ -7,5 +7,3 @@ steps:
     dockerSecret: hub2
     registry: docker.io
 
-
-
