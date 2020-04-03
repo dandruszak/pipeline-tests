@@ -3,7 +3,9 @@ steps:
   dockerBuild:
     user: dandruszak
     imageName: icetek
-    tag: gh
+    tags:
+    - t1
+    - t2
     dockerSecret: hub2
     registry: docker.io
 
