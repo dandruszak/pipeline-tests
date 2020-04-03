@@ -8,6 +8,3 @@ steps:
     - t2
     dockerSecret: hub2
     registry: docker.io
-
-
-
