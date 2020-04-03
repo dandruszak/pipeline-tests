@@ -4,7 +4,7 @@ steps:
     user: dandruszak
     imageName: icetek
     tags:
-    - t1
-    - t2
+    - t3
+    - t4
     dockerSecret: hub3
     registry: docker.io
