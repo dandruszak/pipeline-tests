@@ -1,5 +1,5 @@
 steps:
-- name: build
+- name: build-from-root-path
   dockerBuild:
     user: dandruszak
     imageName: icetek
