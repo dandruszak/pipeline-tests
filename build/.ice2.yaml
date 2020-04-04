@@ -8,3 +8,5 @@ steps:
     - t4
     dockerSecret: hub3
     registry: docker.io
+
+
