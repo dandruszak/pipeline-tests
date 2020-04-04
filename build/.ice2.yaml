@@ -1,5 +1,5 @@
 steps:
-- name: build
+- name: build-ice2
   dockerBuild:
     user: dandruszak
     imageName: icetek
