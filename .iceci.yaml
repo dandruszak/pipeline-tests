@@ -1,10 +1,10 @@
 steps:
-- name: build-from-root-path
-  dockerBuild:
-    user: dandruszak
-    imageName: icetek
-    tags:
-    - t3
-    - t4
-    dockerSecret: hub3
-    registry: docker.io
+- name: env-test
+  dockerRun:
+    image: busybox
+    script: |
+      printenv
+    environment:
+    - name: TESTENV
+      fromSecret: testSecret
+    
