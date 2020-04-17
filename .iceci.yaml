@@ -6,7 +6,7 @@ steps:
       printenv
     environment:
     - name: TESTENV
-      fromSecret: testSecret
+      value: testSecret
     
 
 
