@@ -1,13 +1,14 @@
 steps:
 - name: always-there
+  when:
+    branch: ["master", "feature-*"]
   dockerRun:
     image: busybox
     script: |
       printenv
 - name: feature-wildcard
   when:
-    event: ["commit"]
-    branch: ["feature"]
+    branch: ["feature-*"]
   dockerRun:
     image: busybox
     script: |
@@ -17,8 +18,7 @@ steps:
       value: testSecret
 - name: filter-test
   when:
-    event: ["commit"]
-    branch: ["feature"]
+    branch: ["feature-*"]
     skipBranch: ["feature-skip"]
   dockerRun:
     image: busybox
