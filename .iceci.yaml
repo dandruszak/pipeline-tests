@@ -1,7 +1,5 @@
 steps:
 - name: env-test
-  when:
-    branch: ["master"]
   dockerRun:
     image: busybox
     script: |
@@ -10,8 +8,13 @@ steps:
     - name: TESTENV
       value: testSecret
 - name: filter-test
+  dockerRun:
+    image: busybox
+    script: |
+      printenv
+- name: tag-test
   when:
-    branch: ["filter"]
+    event: ["tag"]
   dockerRun:
     image: busybox
     script: |
