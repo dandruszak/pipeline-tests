@@ -1,6 +1,7 @@
 steps:
 - name: feature-wildcard
   when:
+    event: ["commit"]
     branch: ["feature"]
   dockerRun:
     image: busybox
@@ -11,6 +12,7 @@ steps:
       value: testSecret
 - name: filter-test
   when:
+    event: ["commit"]
     branch: ["feature"]
     skipBranch: ["feature-skip"]
   dockerRun:
