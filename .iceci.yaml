@@ -1,5 +1,7 @@
 steps:
-- name: env-test
+- name: feature-wildcard
+  when:
+    branch: ["feature-*"]
   dockerRun:
     image: busybox
     script: |
@@ -8,18 +10,10 @@ steps:
     - name: TESTENV
       value: testSecret
 - name: filter-test
-  dockerRun:
-    image: busybox
-    script: |
-      printenv
-- name: tag-test
   when:
-    event: ["tag"]
+    branch: ["feature-*"]
+    skipBranch: ["feature-skip"]
   dockerRun:
     image: busybox
     script: |
       printenv
-    
-
-
-
