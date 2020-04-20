@@ -1,4 +1,9 @@
 steps:
+- name: always-there
+  dockerRun:
+    image: busybox
+    script: |
+      printenv
 - name: feature-wildcard
   when:
     event: ["commit"]
