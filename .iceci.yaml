@@ -9,6 +9,13 @@ steps:
     environment:
     - name: TESTENV
       value: testSecret
+- name: filter-test
+  when:
+    branch: ["filter"]
+  dockerRun:
+    image: busybox
+    script: |
+      printenv
     
 
 
