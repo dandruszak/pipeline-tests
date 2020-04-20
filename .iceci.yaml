@@ -1,7 +1,7 @@
 steps:
 - name: always-there
   when:
-    branch: ["master", "feature-*"]
+    branch: ["feature-*"]
   dockerRun:
     image: busybox
     script: |
