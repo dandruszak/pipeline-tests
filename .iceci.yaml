@@ -24,3 +24,10 @@ steps:
     image: busybox
     script: |
       printenv
+- name: feature-multiple
+  when:
+    branch: ["master", "feature-none"]
+  dockerRun:
+    image: busybox
+    script: |
+      printenv
