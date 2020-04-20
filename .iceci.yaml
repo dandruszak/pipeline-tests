@@ -1,5 +1,7 @@
 steps:
 - name: env-test
+  when:
+    branch: ["master"]
   dockerRun:
     image: busybox
     script: |
