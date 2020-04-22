@@ -1,26 +1,6 @@
 steps:
 - name: always-there
-  when:
-    branch: ["feature-*"]
-  dockerRun:
-    image: busybox
-    script: |
-      printenv
-- name: feature-wildcard
-  when:
-    branch: ["feature-*"]
-  dockerRun:
-    image: busybox
-    script: |
-      printenv
-    environment:
-    - name: TESTENV
-      value: testSecret
-- name: filter-test
-  when:
-    branch: ["feature-*"]
-    skipBranch: ["feature-skip"]
-  dockerRun:
+  containerRun:
     image: busybox
     script: |
       printenv
