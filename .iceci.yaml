@@ -1,6 +1,6 @@
 steps:
 - name: always-there
-  dockerRun:
+  containerRun:
     image: busybox
     script: |
       printenv
