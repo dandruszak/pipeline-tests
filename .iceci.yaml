@@ -5,10 +5,9 @@ globals:
 
 failureHandlers:
 - name: my-handler
-  containerRun:
-    image: busybox
-    script: |
-      printenv | grep ICE  
+  image: busybox
+  script: |
+    printenv | grep ICE  
 
 steps:
 - name: always-there
