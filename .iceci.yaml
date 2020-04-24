@@ -1,6 +1,18 @@
+globals:
+  onFailure:
+  - handlerName: my-handler
+
+
+failureHandlers:
+- name: my-handler
+  containerRun:
+    image: busybox
+    script: |
+      printenv | grep ICE  
+
 steps:
 - name: always-there
   containerRun:
     image: busybox
     script: |
-      printenv
+      aaa 
