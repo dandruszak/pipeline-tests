@@ -7,11 +7,12 @@ failureHandlers:
 - name: my-handler
   image: busybox
   script: |
-    printenv | grep ICE  
+    printenv | grep ICE
 
 steps:
 - name: always-there
   containerRun:
     image: busybox
     script: |
-      aaa 
+      aaa
+
