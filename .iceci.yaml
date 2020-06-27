@@ -41,6 +41,7 @@ steps:
       value: hello
     tags:
     - buildargs
+    - morebuildargs
   
       
       
