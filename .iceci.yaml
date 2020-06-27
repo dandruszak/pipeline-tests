@@ -25,4 +25,4 @@ steps:
   containerRun:
     image: busybox
     script: |
-      curl www:80
+      sleep 10
