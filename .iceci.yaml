@@ -31,6 +31,16 @@ steps:
     script: |
       sleep 10
       
-      
+- name: build
+  containerBuild:
+    imageBuildSecret: docker2
+    user: dandruszak
+    imageName: icetek
+    buildArgs:
+    - name: MYARG
+      value: hello
+    tags:
+    - buildargs
+  
       
       
