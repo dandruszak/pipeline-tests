@@ -10,7 +10,7 @@ failureHandlers:
     printenv | grep ICE  
 
 services:
-- name: www_svc
+- name: test
   image: nginx
 
 steps:
