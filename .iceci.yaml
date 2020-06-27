@@ -9,6 +9,10 @@ failureHandlers:
   script: |
     printenv | grep ICE  
 
+services:
+- name: www_svc
+  image: nginx
+
 steps:
 - name: always-there
   containerRun:
