@@ -14,4 +14,15 @@ steps:
   containerRun:
     image: busybox
     script: |
-      aaa 
+      env 
+
+- name: service
+  serviceRun:
+    name: www
+    image: nginx
+
+- name: service-check
+  containerRun:
+    image: busybox
+    script: |
+      curl www:80
