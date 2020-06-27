@@ -33,7 +33,7 @@ steps:
       
 - name: build
   containerBuild:
-    imageBuildSecret: docker2
+    dockerSecret: docker2
     user: dandruszak
     imageName: icetek
     buildArgs:
