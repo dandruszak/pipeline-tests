@@ -39,6 +39,8 @@ steps:
     buildArgs:
     - name: MYARG
       value: hello
+    - name: another
+      value: test
     tags:
     - buildargs
     - morebuildargs
