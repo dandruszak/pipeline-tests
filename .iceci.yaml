@@ -36,11 +36,6 @@ steps:
     dockerSecret: docker2
     user: dandruszak
     imageName: icetek
-    buildArgs:
-    - name: MYARG
-      value: hello
-    - name: another
-      value: test
     tags:
     - buildargs
     - morebuildargs
