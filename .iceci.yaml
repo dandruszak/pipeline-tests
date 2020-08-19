@@ -17,25 +17,8 @@ steps:
 - name: always-there
   containerRun:
     image: busybox
+    file:
+      path: /var/myfile
+      secret: content
     script: |
-      env 
-
-- name: service
-  serviceRun:
-    name: www
-    image: nginx
-
-- name: service-check
-  containerRun:
-    image: busybox
-    script: |
-      sleep 10
-      
-- name: build
-  containerBuild:
-    dockerSecret: docker2
-    user: dandruszak
-    imageName: icetek
-    tags:
-    - buildargs
-    - morebuildargs
+      cat /var/myfile
