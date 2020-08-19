@@ -21,4 +21,4 @@ steps:
       path: /var/myfile
       secret: content
     script: |
-      cat /var/myfile
+      ls /var/myfile
