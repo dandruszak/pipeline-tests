@@ -17,8 +17,8 @@ steps:
 - name: always-there
   containerRun:
     image: busybox
-    file:
-      path: /var/myfile
+    files:
+    - path: /var/myfile
       secret: content
     script: |
       ls /var
