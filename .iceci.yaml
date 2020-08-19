@@ -19,6 +19,6 @@ steps:
     image: busybox
     files:
     - path: /var/myfile
-      secret: content
+      fromSecret: content
     script: |
       ls /var
