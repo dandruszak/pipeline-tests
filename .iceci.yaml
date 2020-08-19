@@ -1,18 +1,3 @@
-globals:
-  onFailure:
-  - handlerName: my-handler
-
-
-failureHandlers:
-- name: my-handler
-  image: busybox
-  script: |
-    printenv | grep ICE  
-
-services:
-- name: test
-  image: nginx
-
 steps:
 - name: always-there
   containerRun:
@@ -21,4 +6,4 @@ steps:
     - path: /var/myfile
       fromSecret: content
     script: |
-      ls /var
+      cat /var/myfile
