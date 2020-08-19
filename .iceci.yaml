@@ -4,6 +4,6 @@ steps:
     image: busybox
     files:
     - path: /var/myfile
-      fromSecret: content
+      fromSecret: docker
     script: |
       cat /var/myfile
